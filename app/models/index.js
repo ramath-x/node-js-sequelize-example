@@ -15,5 +15,12 @@ db.sequelize = sequelize;
 
 db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 db.users = require("./user.model.js")(sequelize, Sequelize);
+db.adresses = require("./address.model.js")(sequelize, Sequelize);
+
+const User = db.users;
+const Address = db.adresses;
+// Define associations
+User.hasMany(Address);
+Address.belongsTo(User);
 
 module.exports = db;

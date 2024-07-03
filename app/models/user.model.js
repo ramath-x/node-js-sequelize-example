@@ -22,7 +22,7 @@ module.exports = (sequelize, Sequelize) => {
     }
   );
 
-  //   User.hasMany(Address);
+  // User.hasMany(Address);
 
   return User;
 };
